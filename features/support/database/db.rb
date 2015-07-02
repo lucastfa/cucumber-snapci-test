@@ -6,6 +6,7 @@ def estabilish_connection
 	@db_connection = ActiveRecord::Base.establish_connection(
 										:adapter => 'postgresql',
                                         :host => ENV['SNAP_DB_PG_HOST'],
+                                        :database => 'pgdatabase',
                                         :username => ENV['SNAP_DB_PG_USER'],
                                         :password => ENV['SNAP_DB_PG_PASSWORD'],
                                         :port => ENV['SNAP_DB_PG_PORT']);
